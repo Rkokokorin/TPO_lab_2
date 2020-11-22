@@ -12,8 +12,8 @@ public class TrigonometricFunctions {
             return result;
         }
     public double sin(double x) {
-        double newX = normalizeX(x);
-        int sign = ((newX > -Math.PI / 2) && (newX < Math.PI / 2)) ? 1 : -1;
+        x = normalizeX(x);
+        int sign = ((x > -Math.PI / 2) && (x < Math.PI / 2)) ? 1 : -1;
         return sign * Math.pow(1 - Math.pow(cos(x), 2), 0.5);
     }
     public double tan(double x) {

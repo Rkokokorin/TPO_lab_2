@@ -14,11 +14,11 @@ public class LogarithmicFunctions {
         }
         return result;
     }
-    public Double log3(Double x) {
+    public double log3(Double x) {
         return ln(x) / ln(3.0);
     }
 
-    public Double log_10(Double x) {
+    public double log10(Double x) {
         return ln(x) * 0.4342944819;
     }
 }
