@@ -2,6 +2,7 @@ package Logic;
 public class MainFunctions {
      private   TrigonometricFunctions   tr = new TrigonometricFunctions();
      private   LogarithmicFunctions     lg = new LogarithmicFunctions();
+     private   CosFunction cos = new CosFunction();
     public Double  solveSystem( Double x){
 
         if (x>0)
@@ -11,9 +12,9 @@ public class MainFunctions {
 
     private Double solveNegative(Double x) {
         double result;
-        result = (((((tr.tan(x) + tr.cot(x)) * tr.tan(x)) + (tr.tan(x) + tr.cos(x))) - ((tr.csc(x)
+        result = (((((tr.tan(x) + tr.cot(x)) * tr.tan(x)) + (tr.tan(x) + cos.cos(x))) - ((tr.csc(x)
                 + tr.cot(x)) * ((tr.cot(x) + tr.csc(x)) + tr.csc(x)))) - ((((tr.csc(x) + tr.tan(x))
-                / tr.sec(x)) / (tr.tan(x) - (tr.cos(x) - tr.sin(x)))) * tr.sin(x)));
+                / tr.sec(x)) / (tr.tan(x) - (cos.cos(x) - tr.sin(x)))) * tr.sin(x)));
     return result;
     }
 
