@@ -33,7 +33,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" name="com.bluecatcode.mockito:mockito-1.10.19-extended:1.1.0" level="project" />
     <orderEntry type="library" name="org.mockito:mockito-inline:3.6.28" level="project" />
   </component>
 </module>
