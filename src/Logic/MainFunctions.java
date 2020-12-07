@@ -3,14 +3,12 @@ public class MainFunctions {
      private   TrigonometricFunctions   tr = new TrigonometricFunctions();
      private   LogarithmicFunctions     lg = new LogarithmicFunctions();
      private   CosFunction cos = new CosFunction();
-    public Double  solveSystem( Double x){
-
+     public Double  solveSystem( Double x){
         if (x>0)
         return solvePositive(x);
         else return solveNegative(x);
         }
-
-    public Double solveNegative(Double x) {
+     public Double solveNegative(Double x) {
         double result;
         result = (((((tr.tan(x) + tr.cot(x)) * tr.tan(x)) + (tr.tan(x) + cos.cos(x))) - ((tr.csc(x)
                 + tr.cot(x)) * ((tr.cot(x) + tr.csc(x)) + tr.csc(x)))) - ((((tr.csc(x) + tr.tan(x))

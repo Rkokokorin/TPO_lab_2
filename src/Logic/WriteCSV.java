@@ -18,7 +18,6 @@ public class WriteCSV {
 
         for (double i = startAt; i <= endAt; i += step)
             values.put(i, method.calculate(i));
-
         return values;
     }
 

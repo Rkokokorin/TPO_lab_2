@@ -1,8 +1,6 @@
 package Test;
 
 import Logic.Ln;
-import Logic.LogarithmicFunctions;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import org.junit.jupiter.api.Test;
@@ -10,7 +8,6 @@ import org.junit.jupiter.api.Test;
 public class LnTest {
         Ln  logarithmicFunctions = new Ln();
         final double DELTA = 0.001;
-        final double EPS = 0.0001;
 
         @Test
         void testZero(){
@@ -44,6 +41,11 @@ public class LnTest {
         void testTen(){
             assertEquals(Math.log(10), logarithmicFunctions.ln(10.), DELTA);
         }
+
+        @Test
+        void testThousand(){
+        assertEquals(Math.log(1000), logarithmicFunctions.ln(1000.), DELTA);
+    }
 
     }
 

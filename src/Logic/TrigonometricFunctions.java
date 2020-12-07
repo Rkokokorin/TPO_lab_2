@@ -1,5 +1,5 @@
 package Logic;
-import static java.lang.Math.abs;
+
 public class TrigonometricFunctions {
     CosFunction cosFunction = new CosFunction();
     private static final int n = 8;
@@ -10,16 +10,20 @@ public class TrigonometricFunctions {
         return sign * Math.pow(1 - Math.pow(cosFunction.cos(x), 2), 0.5);
     }
     public double cos(double x) {
+
         return cosFunction.cos(x) ;
     }
     public double tan(double x) {
         return sin(x) / cosFunction.cos(x);
     }
-    public double cot(double x) { return cosFunction.cos(x) / sin(x); }
+    public double cot(double x) {
+        return cosFunction.cos(x) / sin(x); }
     public double csc(double x) {
         return 1 / sin(x);
     }
     public double sec(double x) {
+        if (cosFunction.cos(x) == 0)
+            return  Double.NaN;
         return 1 / cosFunction.cos(x);
     }
     private double normalizeX(double x) {

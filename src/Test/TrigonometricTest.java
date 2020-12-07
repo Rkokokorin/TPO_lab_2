@@ -8,7 +8,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 import static org.junit.jupiter.api.Assertions.*;
 import static java.lang.Math.*;
 import static org.mockito.Mockito.*;
-
 public class TrigonometricTest {
         static final double DELTA = 0.01;
         static CosFunction cosMock;
@@ -56,6 +55,8 @@ public class TrigonometricTest {
     void cscTest(double x) {
         assertEquals(1/sin(x) , trigonometricFunctions.csc(x), DELTA);
     }
+
+
 }
 
 
