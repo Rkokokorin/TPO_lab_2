@@ -1,15 +1,10 @@
 package Test;
 
 import Logic.CosFunction;
-import Logic.LogarithmicFunctions;
 import Logic.TrigonometricFunctions;
-import org.junit.BeforeClass;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import org.mockito.MockedStatic;
 import static org.junit.jupiter.api.Assertions.*;
 import static java.lang.Math.*;
 import static org.mockito.Mockito.*;
@@ -34,7 +29,6 @@ public class TrigonometricTest {
             when(cosMock.cos(PI * 7 / 4)).thenReturn(-sqrt(2) / 2);
             trigonometricFunctions = new TrigonometricFunctions();
         }
-
 
     @ParameterizedTest
     @ValueSource(doubles =  {0, PI/2, PI/4, PI*3/4, PI, PI*5/4})
@@ -62,11 +56,7 @@ public class TrigonometricTest {
     void cscTest(double x) {
         assertEquals(1/sin(x) , trigonometricFunctions.csc(x), DELTA);
     }
-
-
-
-
-        }
+}
 
 
 

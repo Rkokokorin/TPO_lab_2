@@ -10,7 +10,7 @@ public class MainFunctions {
         else return solveNegative(x);
         }
 
-    private Double solveNegative(Double x) {
+    public Double solveNegative(Double x) {
         double result;
         result = (((((tr.tan(x) + tr.cot(x)) * tr.tan(x)) + (tr.tan(x) + cos.cos(x))) - ((tr.csc(x)
                 + tr.cot(x)) * ((tr.cot(x) + tr.csc(x)) + tr.csc(x)))) - ((((tr.csc(x) + tr.tan(x))
@@ -18,11 +18,13 @@ public class MainFunctions {
     return result;
     }
 
-    private Double solvePositive(double x) {
+    public Double solvePositive(double x) {
         double result;
+        if (x==1) return 0.;
         result = (Math.pow(((Math.pow(lg.ln(x),3) - lg.ln(x)) * lg.log10(x)) * (lg.log10(x) / lg.log3(x)),2));
         return result;
     }
+
 
 
 }
